@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainPageGallery"
+    tools:showIn="@layout/activity_main_page_gallery"
+    android:orientation="vertical"
+    android:background="@color/mainpageBackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/mainpageTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/wallpapers"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/ic_favorite"
+            android:background="@color/mainpageTitle"
+            android:layout_gravity="center"
+            android:onClick="favoriteWallpapers"/>
+
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/mainGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:verticalSpacing="2dp" />
+
+</LinearLayout>
